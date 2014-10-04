@@ -1,0 +1,18 @@
+<style>
+.img-featured {
+	max-height: 150px;
+}
+</style>
+
+{% for post in extractedPosts %}
+<div class="col-sm-4 col-md-4">
+	<h4>{{ post.titles }}</h4>
+	<div class="col-md-4 col-sm-4">
+	<div class="img-featured"><img src="{{post.featured_image.path}}" class="img-responsive" alt="news-image"></div>
+		</div>
+		<div class="col-md-8 col-sm-8">
+			<p>{{post.short | raw}}</p>
+		</div>
+	<a href="/post/{{post.slug}}" class="btn btn-primary">Więcej</a>
+</div>
+{% endfor %}
