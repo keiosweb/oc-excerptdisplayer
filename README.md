@@ -1,11 +1,21 @@
+## Simple October NewsExcerpt Displayer
+
 This is a simple PHP code that we use, more or less customised, to display news from the October's Rainlab Blog.
 
 There are 2 files included in this repository:
 
-code.php - code that should be pasted on October's page "Code" tab.
+**code.php** - code that should be pasted on October's page "Code" tab.
 
-markup.htm - markup example using bootstrap and some custom css
+**markup.htm** - markup example using bootstrap and some custom css
 
+
+## Requirements
+
+- OctoberCMS
+- Rainlab Blog plugin
+
+
+## Files
 
 Let's explain code.php :
 
@@ -76,7 +86,10 @@ Now let's quickly explain markup.htm:
 
 First there is a 'for' loop to go trough all extractedPosts. Then col-md-4 bootstrap column and finally the content of excerpt is being included as
 
-{{post.titles}} is a shortened title of the post.
-{{post.featured.image.path}} is a path to featured image
-{{post.short | raw }} is content stripped to given length
-{{post.slug}} is a slug of the post. To make this link work you should have "post/:slug" page with blogPost component.
+**{{post.titles}}** is a shortened title of the post.
+
+**{{post.featured.image.path}}** is a path to featured image
+
+**{{post.short | raw }}** is content stripped to given length
+
+**{{post.slug}}** is a slug of the post. To make this link work you should have **"post/:slug"** page with blogPost component.
